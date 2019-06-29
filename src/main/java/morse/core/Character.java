@@ -1,10 +1,10 @@
-package com.bou1der.morse.domain.entities;
+package morse;
 
 
 import java.util.Arrays;
 import java.util.List;
 
-import static com.bou1der.morse.domain.entities.MorseCode.*;
+import static morse.MorseCode.*;
 
 public enum MorseCharacter
 {
