@@ -1,22 +1,21 @@
 package morse.core;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class CharacterCodeTest
+public class CharacterCodeTest
 {
 
     @Test
-    void getMorseCodeSequence()
+    public void getMorseCodeSequence()
     {
         assertEquals(Arrays.asList(MorseCode.DOT, MorseCode.DASH),Character.A.getMorseCodeSequence());
     }
 
     @Test
-    void fromChar()
+    public void fromChar()
     {
         assertEquals(Character.A, Character.fromChar('a'));
     }
