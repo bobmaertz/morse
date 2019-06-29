@@ -9,13 +9,13 @@ public class CharacterCodeTest
 {
 
     @Test
-    public void getMorseCodeSequence()
+    public void testMorseCodeSequence()
     {
         assertEquals(Arrays.asList(MorseCode.DOT, MorseCode.DASH),Character.A.getMorseCodeSequence());
     }
 
     @Test
-    public void fromChar()
+    public void testfromChar()
     {
         assertEquals(Character.A, Character.fromChar('a'));
     }
