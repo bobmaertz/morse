@@ -1,9 +1,6 @@
 package morse.core;
 
-/**
- * Grammar code defines the number of moments in MorseCode grammar.
- *
- */
+
 public enum MorseCode
 {
 
@@ -13,6 +10,11 @@ public enum MorseCode
     DOT(1),
     DASH(3);
 
+    //This is an eraly feature that will be expanded on later. 
+    //If someone where to use this library to actually generated working, 
+    //morse code, they would need a way to keep the time for each of the 
+    //code types. This is the time multiplier that occurs for each 
+    //code type. 
     private final int moment;
 
     MorseCode(int moment)

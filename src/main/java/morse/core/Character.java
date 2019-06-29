@@ -3,7 +3,8 @@ package morse.core;
 import java.util.Arrays;
 import java.util.List;
 
-import static morse.core.MorseCode.*;
+import static morse.core.MorseCode.DOT;
+import static morse.core.MorseCode.DASH;
 
 public enum Character
 {
@@ -64,32 +65,32 @@ public enum Character
         return valueOf(String.valueOf(c).toUpperCase());
     }
 
-    public static Character fromDigit(int c)
+    public static Character fromDigit(char c)
     {
         switch (c)
         {
-            case 1:
+            case '1':
                 return ONE;
-            case 2:
+            case '2':
                 return TWO;
-            case 3:
+            case '3':
                 return THREE;
-            case 4:
+            case '4':
                 return FOUR;
-            case 5:
+            case '5':
                 return FIVE;
-            case 6:
+            case '6':
                 return SIX;
-            case 7:
+            case '7':
                 return SEVEN;
-            case 8:
+            case '8':
                 return EIGHT;
-            case 9:
+            case '9':
                 return NINE;
-            case 0:
+            case '0':
                 return ZERO;
             default:
-                return null;
+                throw new IllegalArgumentException();
         }
     }
 }
