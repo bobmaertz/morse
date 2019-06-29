@@ -1,12 +1,11 @@
-package morse;
-
+package morse.core;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static morse.MorseCode.*;
+import static morse.core.MorseCode.*;
 
-public enum MorseCharacter
+public enum Character
 {
     A(      Arrays.asList(DOT, DASH)),
     B(      Arrays.asList(DASH, DOT, DOT ,DOT)),
@@ -47,7 +46,7 @@ public enum MorseCharacter
 
     private List<MorseCode> codes;
 
-    MorseCharacter(List<MorseCode> codes)
+    Character(List<MorseCode> codes)
     {
         this.codes = codes;
     }
@@ -57,15 +56,15 @@ public enum MorseCharacter
         return this.codes;
     }
 
-    public static MorseCharacter fromChar(char c)
+    public static Character fromChar(char c)
     {
-        if(Character.isDigit(c))
-            return fromDecimal(c);
+        if(java.lang.Character.isDigit(c))
+            return fromDigit(c);
 
         return valueOf(String.valueOf(c).toUpperCase());
     }
 
-    public static MorseCharacter fromDecimal(char c)
+    public static Character fromDigit(int c)
     {
         switch (c)
         {

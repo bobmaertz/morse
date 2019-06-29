@@ -1,4 +1,4 @@
-package com.bou1der.morse.domain.entities;
+package morse.core;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,12 +12,12 @@ class CharacterCodeTest
     @Test
     void getMorseCodeSequence()
     {
-        assertEquals(Arrays.asList(MorseCode.DOT, MorseCode.DASH),MorseCharacter.A.getMorseCodeSequence());
+        assertEquals(Arrays.asList(MorseCode.DOT, MorseCode.DASH),Character.A.getMorseCodeSequence());
     }
 
     @Test
     void fromChar()
     {
-        assertEquals(MorseCharacter.A, MorseCharacter.fromChar('a'));
+        assertEquals(Character.A, Character.fromChar('a'));
     }
 }

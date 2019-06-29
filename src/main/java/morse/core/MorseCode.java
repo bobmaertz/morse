@@ -1,4 +1,4 @@
-package morse;
+package morse.core;
 
 /**
  * Grammar code defines the number of moments in MorseCode grammar.
